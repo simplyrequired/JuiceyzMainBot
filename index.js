@@ -289,66 +289,7 @@ Client.on('message', (message) => {
      return;
  }
  
-
-
-Client.on("message", async message => {
-  if(message.author.bot) return;
-    if(message.content.indexOf(Prefix) !== 0) return;
-    const args = message.content.slice(Prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-  if(command === "verify") {
-    const filter = m => m.content.includes('done');
-    console.log("player going to verify")
-    const collector = message.channel.createMessageCollector(filter, { time: 15000 });
-          var username = args[2];
-          if (username){
-            roblox.getIdFromUsername(username).then(id => {
-              var tokenID = message.author.id
-              message.channel.send(new Discord.RichEmbed().setTitle("Please put the following token in your profiles description").setDescription(`**${tokenID}**\n \nHow to verify?\nGo to your roblox page and open settings, find the box called "personal" and paste the code in.(image below)`).setFooter("When you have done that, say done").setImage("https://cdn.discordapp.com/attachments/627169012723351608/627946438747357235/6c4037b801ebe4ec4746c6989af746c9.png").setColor("#ffffff")).then(() => {
-                message.channel.awaitMessages(filter, { maxMatches: 1, time: 60000, errors: ['time']})
-                .then(collected => {
-      roblox.getBlurb(`${id}`).tap(function(user){
-        console.log(user)
-        console.log(message.author.id)
-           if (user.match(message.author.id)){
-         console.log("successful")
-             message.channel.send(new Discord.RichEmbed().setTitle("Success").setDescription(`**You have now been verified as ${username}**`).setFooter("Verification").setColor("#2ecc71"))
-              const VerifyChannel = message.guild.channels.find(ch => ch.name === 'verification-logs');
-              const embed = new Discord.RichEmbed()
-      .setTitle(`Verification Successfull!`)
-      .setColor(0xFFFFFF)
-      .setDescription(`${message.author} has verified as ${username}`)
-      .setFooter('JuiceyzDevelopment')
-      .setTimestamp();
-             VerifyChannel.send(embed)
-             message.member.setNickname(`${username}`)
-             message.member.addRole(message.guild.roles.find(role => role.name === "Verified"));
-             } else {
-                             message.channel.send(new Discord.RichEmbed().setTitle("Error").setDescription(`**Cannot find code on description**`).setFooter("Verification").setColor("#ff4757"))
-             }
-      })
-    
-      })
-                .catch(collected => {
-                  message.channel.send(new Discord.RichEmbed().setTitle("Timed out!").setDescription(`**Session Timed out!**`).setFooter("Verification").setColor("#ff4757"))
-                })
-              })
-            
-              
-              
-            }).catch(function (err) {
-              
-              message.channel.send(new Discord.RichEmbed().setTitle("Error").setDescription(`**Sorry, that user doesn't seem to exist, double check your spelling and try again.**`).setFooter("Verification").setColor("#ff4757"))
-            })
-          } else {
-            message.channel.send(new Discord.RichEmbed().setTitle("Error").setDescription(`**Please enter a username.**`).setFooter("Verification").setColor("#ff4757"))
-          }
-          return;
-        
-      }
 });
-
 
 
 

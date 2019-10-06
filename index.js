@@ -122,7 +122,7 @@ Client.on("message", async message => {
                     channel1.send(embed3);
       }
   if (command === "spotify") {
-    if (!message.member.roles.some(r => [`Verified].includes(r.name)))
+    if (!message.member.roles.some(r => [`Verified`].includes(r.name)))
       return message.channel.send();
                     const embed = new Discord.RichEmbed()
                       .setTitle(`Spotilife | Now playing`)

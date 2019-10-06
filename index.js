@@ -123,13 +123,14 @@ Client.on("message", async message => {
       }
   if (command === "spotify") {
     if (!message.member.roles.some(r => [`Verified].includes(r.name)))
-                    const embed3 = new Discord.RichEmbed()
+      return message.channel.send();
+                    const embed = new Discord.RichEmbed()
                       .setTitle(`Spotilife | Now playing`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author.activity}`)
                       .setFooter("JuiceyzDevelopment")
                       .setTimestamp();
-                    channel1.send(embed3);
+                    message.channel.send(embed)
       }
 
   if (command === "training") {

@@ -446,6 +446,55 @@ function isCommand(command, message) {
   return content.startsWith(Prefix + command);
 }
 
+
+
+
+
+
+
+
+Client.on("message", async message => {
+  if (message.author.bot) return;
+
+const AndrewPrefix = "Andrew"
+  // Hello Function
+if(message.content.startsWith(`Hello ${AndrewPrefix}`)){
+  message.channel.send(`Hello ${message.author.username}, How are you?`)
+}
+if(message.content.startsWith(`Hello ${AndrewPrefix}.`)){
+  message.channel.send(`Hello ${message.author.username}, You look great today <3`)
+}
+if(message.content.startsWith(`Hello ${AndrewPrefix}!`)){
+  message.channel.send(`Hello ${message.author.username}, How are you?`)
+}
+// Hey Function
+if(message.content.startsWith(`Hey ${AndrewPrefix}`)){
+  message.channel.send(`Hello ${message.author.username}, How are you?`)
+}
+if(message.content.startsWith(`Hello ${AndrewPrefix}.`)){
+  message.channel.send(`Hello ${message.author.username}, How are you?`)
+}
+if(message.content.startsWith(`Hello ${AndrewPrefix}!`)){
+  message.channel.send(`Hello ${message.author.username}, How are you?`)
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Client.on("message", message => {
   if (message.author.bot) return; // Dont answer yourself.
   var args = message.content.split(/[ ]+/);

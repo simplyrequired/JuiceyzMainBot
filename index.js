@@ -507,6 +507,11 @@ if(message.content === (`${AndrewPrefix}?`)){
 if(message.content === (`What's 1+1?`)){
   message.channel.send(`4..||Kidding 2||`)
 }
+  if(message.content === (`Good morning ${AndrewPrefix}`)){
+  message.channel.send(`Good morning!`)
+}
+    if(message.content === (`${AndrewPrefix} call the emergency services`)){
+  message.channel.send(`Calling **911**,**112**`)
 });
 
 

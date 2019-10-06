@@ -458,34 +458,34 @@ Client.on("message", async message => {
 
 const AndrewPrefix = "Andrew"
   // Hello Function
-if(message.content.startsWith(`Hello ${AndrewPrefix}`)){
+if(message.content === (`Hello ${AndrewPrefix}`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
-if(message.content.startsWith(`Hello ${AndrewPrefix}.`)){
+if(message.content === (`Hello ${AndrewPrefix}.`)){
   message.channel.send(`Hello ${message.author.username}, You look great today <3`)
 }
-if(message.content.startsWith(`Hello ${AndrewPrefix}!`)){
+if(message.content === (`Hello ${AndrewPrefix}!`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
 // Hey Function
-if(message.content.startsWith(`Hey ${AndrewPrefix}`)){
+if(message.content === (`Hey ${AndrewPrefix}`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
-if(message.content.startsWith(`Hey ${AndrewPrefix}.`)){
+if(message.content === (`Hey ${AndrewPrefix}.`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
-if(message.content.startsWith(`Hey ${AndrewPrefix}!`)){
+if(message.content === (`Hey ${AndrewPrefix}!`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
-  
-  if(message.content.startsWith(`${AndrewPrefix}`)){
+
+if(message.content === (`${AndrewPrefix}`)){
   message.channel.send(`Yes?`)
 }
-if(message.content.startsWith(`${AndrewPrefix}?`)){
+if(message.content === (`${AndrewPrefix}?`)){
   message.channel.send(`I'm listening`)
 }
 
-if(message.content.startsWith(`What's 1+1?`)){
+if(message.content === (`What's 1+1?`)){
   message.channel.send(`4..||Kidding 2||`)
 }
 });

@@ -57,8 +57,8 @@ Client.on("ready", () => {
   console.log(`Logged in as: ${Client.user.username} BotID: ${Client.user.id}`);
   Client.user.setPresence({
     game: {
-      name: "JuiceyzDevelopment",
-      type: "STREAMING",
+      name: "🍋Come on down & get some healthy Lemon Juice!🍋",
+      type: "WATCHING",
       url: "https://www.twitch.tv/simplyrequiredrblx"
     }
   });

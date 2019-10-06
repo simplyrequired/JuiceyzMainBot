@@ -495,7 +495,15 @@ if(message.content === (`${AndrewPrefix}`)){
 if(message.content === (`${AndrewPrefix}?`)){
   message.channel.send(`I'm listening`)
 }
-
+  if(message.content === (`Great`)){
+  message.channel.send(`It's great to hear`)
+}
+    if(message.content === (`Great!`)){
+  message.channel.send(`Aww! Alrighty`)
+}
+    if(message.content === (`Great.`)){
+  message.channel.send(`Aww! Alrighty`)
+}
 if(message.content === (`What's 1+1?`)){
   message.channel.send(`4..||Kidding 2||`)
 }

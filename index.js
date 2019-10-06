@@ -512,6 +512,7 @@ if(message.content === (`What's 1+1?`)){
 }
     if(message.content === (`${AndrewPrefix} call the emergency services`)){
   message.channel.send(`Calling **911**,**112**`)
+    }
 });
 
 

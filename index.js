@@ -124,7 +124,7 @@ Client.on("message", async message => {
   if (command === "spotify") {
     if (!message.member.roles.some(r => [`Verified].includes(r.name)))
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Now playing`)
+                      .setTitle(`Spotilife | Now playing`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author.activity}`)
                       .setFooter("JuiceyzDevelopment")

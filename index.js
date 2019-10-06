@@ -471,10 +471,10 @@ if(message.content.startsWith(`Hello ${AndrewPrefix}!`)){
 if(message.content.startsWith(`Hey ${AndrewPrefix}`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
-if(message.content.startsWith(`Hello ${AndrewPrefix}.`)){
+if(message.content.startsWith(`Hey ${AndrewPrefix}.`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
-if(message.content.startsWith(`Hello ${AndrewPrefix}!`)){
+if(message.content.startsWith(`Hey ${AndrewPrefix}!`)){
   message.channel.send(`Hello ${message.author.username}, How are you?`)
 }
 });

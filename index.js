@@ -58,7 +58,7 @@ Client.on("ready", () => {
   Client.user.setPresence({
     game: {
       name: "🍋Come on down & get some healthy Lemon Juice!🍋",
-      type: "WATCHING",
+      type: "STREAMING",
       url: "https://www.twitch.tv/simplyrequiredrblx"
     }
   });

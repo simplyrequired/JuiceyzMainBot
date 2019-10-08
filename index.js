@@ -30,8 +30,8 @@ Client.on("guildMemberAdd", member => {
   const embed = new Discord.RichEmbed()
     .setTitle(`User joined!`)
     .setColor(0x73ffca)
-    .setDescription(`Hey ${member}! Welcome to Juiceyz`)
-    .setFooter("JuiceyzDevelopment")
+    .setDescription(`🎃 Hey ${member}! Welcome to Juiceyz, and have a happy Halloween!`)
+    .setFooter("JuiceyzDevelopment 🎃")
     .setTimestamp();
   channel.send(embed);
 });
@@ -42,8 +42,8 @@ Client.on("guildMemberRemove", member => {
   const embed = new Discord.RichEmbed()
     .setTitle(`User left...`)
     .setColor(0x73ffca)
-    .setDescription(`Aww! ${member} come back soon!`)
-    .setFooter("JuiceyzDevelopment")
+    .setDescription(`Aww! ${member}, I already miss you xd! Come back to the party ;)`)
+    .setFooter("JuiceyzDevelopmen t🎃")
     .setTimestamp();
   channel.send(embed);
   
@@ -57,7 +57,7 @@ Client.on("ready", () => {
   console.log(`Logged in as: ${Client.user.username} BotID: ${Client.user.id}`);
   Client.user.setPresence({
     game: {
-      name: "🍋Come on down & get some healthy Lemon Juice!🍋",
+      name: "🎃 Omg V1.5 almost out! I'm getting hurgry for some juice! 🎃",
       type: "STREAMING",
       url: "https://www.twitch.tv/simplyrequiredrblx"
     }
@@ -77,7 +77,7 @@ Client.on("message", async message => {
     const embed = new Discord.RichEmbed()
       .setTitle("Ping?")
       .setColor(0x73ffca)
-      .setDescription(`❤️ ${Math.round(Client.ping)}ms`)
+      .setDescription(`🎃 ${Math.round(Client.ping)}ms\n Wait...Is my hearth a ...`)
       .setFooter("JuiceyzDevelopment")
       .setTimestamp();
     message.channel.send(embed);
@@ -96,10 +96,10 @@ Client.on("message", async message => {
 
     if (!channel) message.channel.send("I could not find the channel!");
     const embed = new Discord.RichEmbed()
-      .setTitle("Development Announcement")
+      .setTitle("🎃 Development Announcement 🎃")
       .setColor(0x73ffca)
       .setDescription(sayMessage)
-      .setFooter("JuiceyzDevelopment")
+      .setFooter("JuiceyzDevelopment 🎃")
       .setTimestamp();
     channel.send(embed);
   }
@@ -114,23 +114,12 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Development Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
-      }
-  if (command === "spotify") {
-    if (!message.member.roles.some(r => [`Verified`].includes(r.name)))
-      return message.channel.send();
-                    const embed = new Discord.RichEmbed()
-                      .setTitle(`Spotilife | Now playing`)
-                      .setColor(0x73ffca)
-                      .setDescription(`${message.author.activity}`)
-                      .setFooter("JuiceyzDevelopment")
-                      .setTimestamp();
-                    message.channel.send(embed)
       }
 
   if (command === "training") {
@@ -143,7 +132,7 @@ Client.on("message", async message => {
     const channel = message.guild.channels.find(ch => ch.name === "sessions");
     if (!channel) message.channel.send("I could not find the channel!");
     const embed = new Discord.RichEmbed()
-      .setTitle("Training Announcement!")
+      .setTitle("🎃 Training Announcement! 🎃")
       .setColor(0x73ffca)
       .setDescription(sayMessage)
       .setThumbnail(`${message.author.displayAvatarURL}`)
@@ -151,7 +140,7 @@ Client.on("message", async message => {
         "Game Link",
         "https://www.roblox.com/games/3987390268/Training-Center"
       )
-      .setFooter("JuiceyzDevelopment")
+      .setFooter("JuiceyzDevelopment 🎃")
       .setTimestamp();
     channel.send(embed);
     message.channel.send("Alright! Sended");
@@ -167,11 +156,11 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Training Command in channel: ${message.channel}`)
                     .addField("Args", sayMessage)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -206,10 +195,10 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Chat Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -226,11 +215,11 @@ Client.on("message", async message => {
     );
     if (!channel) message.channel.send("I could not find the channel!");
     const embed = new Discord.RichEmbed()
-      .setTitle(`${message.author.username}'s Suggestion`)
+      .setTitle(`🎃 ${message.author.username}'s Suggestion 🎃`)
       .setColor(0x73ffca)
       .setThumbnail(`${message.author.displayAvatarURL}`)
       .setDescription(sayMessage)
-      .setFooter("JuiceyzDevelopment")
+      .setFooter("JuiceyzDevelopment 🎃")
       .setTimestamp();
     channel.send(embed);
   }
@@ -246,10 +235,10 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Suggestions Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -295,7 +284,7 @@ Client.on("message", async message => {
       .addField("Juicer", "RankID: 4", true)
       .addField("Trainee", "RankID: 2", true)
       .addField("Customer Juicer", "RankID: 1", true)
-      .setFooter("JuiceyzDevelopment")
+      .setFooter("JuiceyzDevelopment 🎃")
       .setTimestamp();
     message.channel.send(embed);
   }
@@ -310,10 +299,10 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the GroupRankList Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -347,7 +336,7 @@ Client.on("message", async message => {
                       .setTitle(`Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the ServerInformation Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -383,10 +372,10 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Say Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -411,10 +400,10 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Talk Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
       }
@@ -442,10 +431,10 @@ Client.on("message", async message => {
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Purge Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
   }
@@ -470,23 +459,23 @@ Client.on("message", async message => {
 const AndrewPrefix = "Andrew"
   // Hello Function
 if(message.content === (`Hello ${AndrewPrefix}`)){
-  message.channel.send(`Hello ${message.author.username}, How are you?`)
+  message.channel.send(`Hello ${message.author.username}, How are you? 🎃`)
 }
 if(message.content === (`Hello ${AndrewPrefix}.`)){
-  message.channel.send(`Hello ${message.author.username}, You look great today <3`)
+  message.channel.send(`Hello ${message.author.username}, You look great today <3 🎃`)
 }
 if(message.content === (`Hello ${AndrewPrefix}!`)){
-  message.channel.send(`Hello ${message.author.username}, How are you?`)
+  message.channel.send(`Hello ${message.author.username}, How are you? 🎃`)
 }
 // Hey Function
 if(message.content === (`Hey ${AndrewPrefix}`)){
-  message.channel.send(`Hello ${message.author.username}, How are you?`)
+  message.channel.send(`Hello ${message.author.username}, How are you? 🎃`)
 }
 if(message.content === (`Hey ${AndrewPrefix}.`)){
-  message.channel.send(`Hello ${message.author.username}, How are you?`)
+  message.channel.send(`Hello ${message.author.username}, How are you? 🎃`)
 }
 if(message.content === (`Hey ${AndrewPrefix}!`)){
-  message.channel.send(`Hello ${message.author.username}, How are you?`)
+  message.channel.send(`Hello ${message.author.username}, How are you? 🎃`)
 }
 
 if(message.content === (`${AndrewPrefix}`)){
@@ -504,15 +493,10 @@ if(message.content === (`${AndrewPrefix}?`)){
     if(message.content === (`Great.`)){
   message.channel.send(`Aww! Alrighty`)
 }
-if(message.content === (`What's 1+1?`)){
-  message.channel.send(`4..||Kidding 2||`)
-}
   if(message.content === (`Good morning ${AndrewPrefix}`)){
   message.channel.send(`Good morning!`)
 }
-    if(message.content === (`${AndrewPrefix} call the emergency services`)){
-  message.channel.send(`Calling **911**,**112**`)
-    }
+
 });
 
 
@@ -543,12 +527,12 @@ Client.on("message", message => {
       );
     var username = args[1];
     var rankIdentifier = Number(args[2]) ? Number(args[2]) : args[2];
-    if (!rankIdentifier) return message.channel.send("Please enter a rank!");
+    if (!rankIdentifier) return message.channel.send("Please enter a rank! 🎃");
     if (username) {
       const embed = new Discord.RichEmbed()
-        .setTitle("Database")
+        .setTitle("🎃 Database")
         .setColor(0x73ffca)
-        .setDescription(`Checking for ${username}`);
+        .setDescription(`🎃 Checking for ${username} 🎃`);
       message.channel.send(embed);
       roblox
         .getIdFromUsername(username)
@@ -558,7 +542,7 @@ Client.on("message", message => {
             .then(function(rank) {
               if (maximumRank <= rank) {
                 const embed = new Discord.RichEmbed()
-                  .setTitle("JuiceyzDevelopment Database")
+                  .setTitle("🎃 JuiceyzDevelopment Database 🎃")
                   .setColor(0xff4343)
                   .setDescription(
                     `Username ${username}\nWith Rank ${rank} is not promotable.`
@@ -566,7 +550,7 @@ Client.on("message", message => {
                 message.channel.send(embed);
               } else {
                 const embed = new Discord.RichEmbed()
-                  .setTitle("JuiceyzDevelopment Database")
+                  .setTitle("🎃 JuiceyzDevelopment Database 🎃")
                   .setColor(0x73ffca)
                   .setDescription(
                     `Username ${username}\nWith Rank ${rank} is promotable!`
@@ -594,17 +578,17 @@ Client.on("message", message => {
                       .addField(`New Rank`, `${newRole.name}`)
                       .addField(`Ranked by`, `${message.author}`)
                       .setDescription("Group AuditLog - JuiceyzRankingBot")
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel.send(embed2);
                     const channel1 = message.guild.channels.find(
                       ch => ch.name === "bot-logs"
                     );
                     const embed3 = new Discord.RichEmbed()
-                      .setTitle(`Command logged`)
+                      .setTitle(`🎃 Command logged`)
                       .setColor(0x73ffca)
                       .setDescription(`${message.author} used the Ranking Command in channel: ${message.channel}`)
-                      .setFooter("JuiceyzDevelopment")
+                      .setFooter("JuiceyzDevelopment 🎃")
                       .setTimestamp();
                     channel1.send(embed3);
                   })
